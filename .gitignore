@@ -1,0 +1,6 @@
+# Ignore raw pump dataset(s)
+combined_pump_timeseries.csv
+
+# But allow cleaned dataset
+!cleaned_pump_timeseries.csv
+
