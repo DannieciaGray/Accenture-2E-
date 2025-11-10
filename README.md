@@ -67,22 +67,36 @@ Follow these steps to reproduce and test the project:
 
 5. **Access the dataset**
     The dataset is provided by AI Studio (synthetic data). It includes:
+
         Throughput
+
         Operating Pressure (bar)
+
         Vibration
+
         Bearing Temperature
+
         Pump Status (RUNNING vs DOWN)
 
 ## Data Understanding and Preparation 
 Dataset size: 720,050 records from 50 pumps
+
 Type: Synthetic time-series sensor data
+
 Target: Pump Status (RUNNING vs DOWN)
+
 Data quality: No duplicates, no missing values
+
 Cleaning: Outliers handled via Winsorization
+
 Feature engineering:
+
     -Normalization for comparability
+
     -Interaction terms between correlated features
+
     -Lag and rolling statistics for time-series modeling
+
     -Target definition: predict failure within the next X hours
 
 ## Modeling and Evaluation 
@@ -90,7 +104,9 @@ Our team explored several classification models, evaluating performance on accur
 
 **Key Findings**
     Vibration and bearing temperature consistently rise before failures.
+
     The final model effectively detects early-stage faults.
+
     High recall ensured more true positives — essential in minimizing missed failures.
 
 ## Business Impact
