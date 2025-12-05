@@ -1,5 +1,5 @@
 # Accenture Predictive Maintenance: Reducing Downtime Through Machine Learning
-> **“Production Means Profit; Pumps Propel Product Through Pipes.”**
+> **“Production Means Profit; Pumps Propel Product Through Pipes”**
 
 ## Team Members
 
