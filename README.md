@@ -7,7 +7,7 @@
 | Name | University | Contribution |
 |------|-------------|---------------|
 | **Sadhana Vasanthakumar** | Rutgers University | Led model definition and metric selection, co-developed baseline logistic regression, contributed to model evaluation and result interpretation. |
-| **Krisha Patel** | Rutgers University | Authored project proposal, handled feature engineering, and participated in dataset preprocessing and cleaning. |
+| **Krisha Patel** | Rutgers University | Authored project proposal, handled feature engineering, dealing with class imbalance and logistic regression modeling. |
 | **Reeya Singh** | Rutgers University | Focused on feature engineering and model training across multiple model types. |
 | **Mohnish Mehta** | Rutgers University | Supported model comparison and fine-tuning; contributed to hyperparameter optimization. |
 | **Sophia Yan** | Rutgers University | Conducted exploratory data analysis and helped define early signal features (vibration, bearing temperature). |
