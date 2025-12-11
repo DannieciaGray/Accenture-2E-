@@ -7,7 +7,7 @@
 | Name | University | Contribution |
 |------|-------------|---------------|
 | **Sadhana Vasanthakumar** | Rutgers University | Led model definition and metric selection, co-developed baseline logistic regression, contributed to model evaluation and result interpretation. |
-| **Krisha Patel** | Rutgers University | Authored project proposal, handled feature engineering, dealing with class imbalance and logistic regression modeling. |
+| **Krisha Patel** | Rutgers University | Authored project proposal, handled feature engineering, and participated in dataset preprocessing and cleaning. |
 | **Reeya Singh** | Rutgers University | Focused on feature engineering and model training across multiple model types. |
 | **Mohnish Mehta** | Rutgers University | Supported model comparison and fine-tuning; contributed to hyperparameter optimization. |
 | **Sophia Yan** | Rutgers University | Conducted exploratory data analysis and helped define early signal features (vibration, bearing temperature). |
@@ -102,12 +102,7 @@ Feature engineering:
 ## Modeling and Evaluation 
 Our team explored several classification models, evaluating performance on accuracy, recall, and interpretability.
 
-**Key Findings**
-    Vibration and bearing temperature consistently rise before failures.
-
-    The final model effectively detects early-stage faults.
-
-    High recall ensured more true positives — essential in minimizing missed failures.
+## Model Development 
 
 ## Business Impact
 Operational Continuity: Pumps are the heartbeat of refineries; our solution prevents production halts.
@@ -116,6 +111,48 @@ Financial Efficiency: Predictive insights reduce emergency repair costs and lost
 
 Process Optimization: Reliable pump performance ensures steady flow through pipelines — aligning with the 6 Ps:
 Production Means Profit; Pumps Propel Product Through Pipes.
+
+## Code Highlights 
+Main workflow notebook that includes:
+-Data Exploration 
+-Feature Engineering
+-Model Training 
+-Model Comparison
+-Evaluation and Visualization Output
+
+Feature Engineering Components 
+-Lag and rolling-window features capturing sensor drift patterns
+-Interaction terms between pressure, vibration, and temperature
+-Winsorization procedure to mitigate extreme outliers
+
+Model Components
+-Functions for training logistic regression and random forest models
+-Grid search blocks for tuning parameters
+-Output of confusion matrices and metric summaries
+
+## Results and Key Findings 
+**Key Findings**
+    Vibration and bearing temperature consistently rise before failures.
+
+    The final model effectively detects early-stage faults.
+
+    High recall ensured more true positives — essential in minimizing missed failures.
+## Discussion & Reflection 
+What Worked Well
+
+    -Domain-specific feature engineering (lags, rolling windows) increased predictive power significantly.
+    -Winsorization stabilized noise-heavy features like vibration and temperature.
+    -High recall aligns directly with real-world maintenance priorities.
+
+Challenges
+    -Synthetic data produced extremely high model performance, which may not translate directly to real noisy industrial environments.
+    -Oversampling techniques (like SMOTE) produced unrealistic patterns and were removed.
+    -Some advanced models (e.g., XGBoost) overfit the minority class.
+
+What We Learned
+    -Feature engineering is crucial when dealing with time-series industrial sensor data.
+    -Models with high interpretability (logistic regression) can perform nearly as well as complex models.
+    -Prioritizing recall over general accuracy is essential in safety-critical predictive maintenance systems.
 
 ## Future Work 
     Integrate real-world IoT streaming data for live monitoring.
