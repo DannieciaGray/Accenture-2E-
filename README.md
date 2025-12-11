@@ -145,11 +145,13 @@ What Worked Well
     -High recall aligns directly with real-world maintenance priorities.
 
 Challenges
+
     -Synthetic data produced extremely high model performance, which may not translate directly to real noisy industrial environments.
     -Oversampling techniques (like SMOTE) produced unrealistic patterns and were removed.
     -Some advanced models (e.g., XGBoost) overfit the minority class.
 
 What We Learned
+
     -Feature engineering is crucial when dealing with time-series industrial sensor data.
     -Models with high interpretability (logistic regression) can perform nearly as well as complex models.
     -Prioritizing recall over general accuracy is essential in safety-critical predictive maintenance systems.
