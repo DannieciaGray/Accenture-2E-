@@ -103,6 +103,23 @@ Feature engineering:
 Our team explored several classification models, evaluating performance on accuracy, recall, and interpretability.
 
 ## Model Development 
+Our model development process followed a structured approach centered on predictive reliability and interpretability.
+
+Approach
+
+    - Treated pump failure detection as a binary classification problem.
+    - Evaluated multiple models, including logistic regression, random forest, and gradient boosting.
+    - Prioritized recall due to the high cost of undetected pump failures in real industrial environments.
+    - Explicitly addressed class imbalance to ensure minority failure cases were not overlooked during training or evaluation.
+
+Training Workflow
+
+    - Tran/test split: 70/30, using stratification on the target variable (y) to preserve the original class distribution in both training and testing sets.
+    - Class imbalance handling in models: Applied class weighting (e.g., class_weight = "balanced" in logistic regression) so misclassification of the minority failure class was penalized more heavily during model training.
+    - Winsorization used to stablize extreme sensor readings. 
+    - Standardization applied to continuous features.
+    - Created domain-informed features including: Lag variables for vibration and temperature, rolling averages and interaction terms
+    - Hyperparameter tuning performed for tree-based models.
 
 ## Business Impact
 Operational Continuity: Pumps are the heartbeat of refineries; our solution prevents production halts.
